@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es-CL">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Encriptador y Desencriptador</title>
+</head>
+
+<body>
+    <!-- Encabezado con logo -->
+    <header class="header">
+        <div class="logo">
+            <a href="#"><img src="logo.png" alt="Logo"></a>
+        </div>
+    </header>
+    
+    <!-- Contenedor principal -->
+    <main class="container">
+        <!-- Sección de entrada de texto -->
+        <section class="input-section">
+            <!-- Área de texto para ingresar texto a encriptar o desencriptar -->
+            <textarea id="inputTexto" placeholder="Ingrese el texto aquí"
+                aria-label="Área de texto para ingresar texto a encriptar o desencriptar"></textarea>
+            <!-- Botones para encriptar y desencriptar -->
+            <div class="buttons">
+                <button onclick="encriptar();" class="button encriptar"
+                    aria-label="Botón para encriptar texto">Encriptar</button>
+                <button onclick="desencriptar();" class="button desencriptar"
+                    aria-label="Botón para desencriptar texto">Desencriptar</button>
+            </div>
+        </section>
+        
+        <!-- Sección de salida de texto -->
+        <section class="output-section" id="outputSection">
+            <div class="output-container">
+                <!-- Imagen decorativa con lupa -->
+                <img src="muñeco.png" alt="Muñeco con lupa" class="image" id="muñeco">
+                <!-- Mensaje por defecto si no hay texto para mostrar -->
+                <p id="placeholderText">Ningún mensaje fue encontrado</p>
+                <!-- Texto de salida encriptado o desencriptado -->
+                <p class="output-text" id="outputTexto" aria-live="polite"></p>
+                <!-- Botón para copiar el texto -->
+                <button onclick="copiarTexto();" class="button copiar" aria-label="Botón para copiar texto">Copiar</button>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Pie de página -->
+    <footer>
+        <p>Desarrollado por Lukas Ahubert</p>
+    </footer>
+    
+    <!-- Script JavaScript -->
+    <script src="app.js"></script>
+</body>
+
+</html>
